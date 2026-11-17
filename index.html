@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lochana Manuth Bandara | Cybersecurity Portfolio</title>
+  <meta name="description" content="Lochana Manuth Bandara — Cybersecurity learner focused on ethical hacking, penetration testing, and hands-on labs." />
+  <meta name="theme-color" content="#060812" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script>
+// Disable Right Click
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+// Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+C
+document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // F12
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { // Ctrl+Shift+I
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 85) { // Ctrl+U
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 67) { // Ctrl+C
+        return false;
+    }
+};
+</script>
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand__mark"></span>
+        <span class="brand__text">Lochana</span>
+        <span class="brand__muted">Manuth</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certs</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile" id="mobile" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#skills">Skills</a>
+      <a href="#certs">Certs</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__left">
+         
+
+          
+          <div class="profile-wrap reveal">
+            <img src="./assets/profile.jpg" alt="Profile photo" class="profile-img" />
+          </div>
+
+          <h1 class="h1 reveal">
+            Lochana <span class="grad">Manuth</span> Bandara
+          </h1>
+<p class="lead reveal">
+            A/L student (Engineering Technology) at Kumbukgete Central College — building a strong foundation in IT and
+            focusing on <span class="accent">Cybersecurity</span> through certifications + hands‑on labs.
+          </p>
+
+
+
+          <div class="chips reveal" aria-label="Quick tags">
+
+            <span class="chip">Pentesting</span>
+            <span class="chip">Network Security</span>
+            <span class="chip">Web Security</span>
+            <span class="chip">Ethical Hacking</span>
+          </div>
+
+          <div class="stats reveal" role="group" aria-label="Quick stats">
+            <div class="stat">
+              <div class="stat__k"></div>
+              <div class="stat__v"><span class="dot dot--ok"></span>Learning & Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k"></div>
+              <div class="stat__v">Kurunegala, Sri Lanka</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k"></div>
+              <div class="stat__v">Cybersecurity Enthusiast</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__right reveal">
+          <div class="terminal">
+            <div class="terminal__top">
+              <div class="lights" aria-hidden="true">
+                <span class="l l--r"></span>
+                <span class="l l--y"></span>
+                <span class="l l--g"></span>
+              </div>
+              <div class="terminal__title"></div>
+              <button class="terminal__copy" id="copyBtn" title="Copy last output" aria-label="Copy last output">Copy</button>
+            </div>
+            <div class="terminal__body" id="termOut" aria-live="polite"></div>
+            <div class="terminal__in">
+              <span class="prompt">lochana@lab:~$</span>
+              <input id="termInput" type="text" autocomplete="off" spellcheck="false" placeholder="type: help" />
+            </div>
+          </div>
+
+
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <h2 class="h2 reveal">About</h2>
+          </div>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card reveal">
+            <h3 class="h3">Bio</h3>
+            <p class="p">
+              I'm Lochana Manuth — an A/L student at Kumbukgete Central College (Engineering Technology stream).
+              I’m focused on cybersecurity , ethical hacking, and practical labs to learn how attacks work and how to defend against them.
+            </p>
+            <p class="p">
+              I also build small tools and scripts to strengthen automation skills and a problem‑solving mindset.
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="h3">What I’m doing now</h3>
+            <ul class="list">
+              <li><span class="bullet"></span> Learning pentesting methodology & reporting</li>
+              <li><span class="bullet"></span> Practicing labs (TryHackMe / HTB) and documenting notes</li>
+              <li><span class="bullet"></span> Improving networking & traffic analysis skills</li>
+              <li><span class="bullet"></span> Building beginner tools for Linux workflows</li>
+            </ul>
+            <div class="cta">
+              <a class="link" href="#contact">Let’s connect <span>→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section id="highlights" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <h2 class="h2 reveal">Highlights</h2>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card reveal">
+            <div class="card__icon">🛡️</div>
+            <h3 class="h3">Offensive Security Focus</h3>
+            <p class="p muted">Ethical hacking , recon, and safe practice.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">🧪</div>
+            <h3 class="h3">Hands‑On Labs</h3>
+            <p class="p muted">TryHackMe / HTB learning paths and exercises.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">🧰</div>
+            <h3 class="h3">Tooling</h3>
+            <p class="p muted">Wireshark, Nmap, Burp, Kali Linux, Metasploit.</p>
+          </div>
+        </div>
+
+        <div class="timeline card reveal">
+          <div class="timeline__head">
+            <h3 class="h3">Learning Path</h3>
+          </div>
+          <div class="timeline__grid">
+            <div class="titem">
+              <div class="titem__dot"></div>
+              <div class="titem__title">Fundamentals</div>
+              <div class="titem__text muted">Networking • Linux • core security</div>
+            </div>
+            <div class="titem">
+              <div class="titem__dot"></div>
+              <div class="titem__title">Labs</div>
+              <div class="titem__text muted">TryHackMe / HTB practice</div>
+            </div>
+            <div class="titem">
+              <div class="titem__dot"></div>
+              <div class="titem__title">Projects</div>
+              <div class="titem__text muted">Small tools + automation</div>
+            </div>
+            <div class="titem">
+              <div class="titem__dot"></div>
+              <div class="titem__title">Next</div>
+              <div class="titem__text muted">Writeups + deeper topics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <h2 class="h2 reveal">Skills</h2>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card reveal">
+            <h3 class="h3">Security</h3>
+            <div class="meters">
+              <div class="meter">
+                <div class="meter__row"><span>Offensive Security</span><span class="muted">Learning</span></div>
+                <div class="bar"><div class="fill" style="width:68%"></div></div>
+              </div>
+              <div class="meter">
+                <div class="meter__row"><span>Network Security</span><span class="muted">Learning</span></div>
+                <div class="bar"><div class="fill" style="width:64%"></div></div>
+              </div>
+              <div class="meter">
+                <div class="meter__row"><span>Web Security </span><span class="muted">Learning</span></div>
+                <div class="bar"><div class="fill" style="width:56%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="h3">Tools</h3>
+            <ul class="list">
+              <li><span class="bullet"></span> Wireshark • Nmap • Burp Suite</li>
+              <li><span class="bullet"></span> Kali Linux toolset</li>
+              <li><span class="bullet"></span> OWASP ZAP</li>
+              <li><span class="bullet"></span> OSINT </li>
+            </ul>
+            
+          </div>
+
+          <div class="card reveal">
+            <h3 class="h3">Programming</h3>
+            <div class="meters">
+              <div class="meter">
+                <div class="meter__row"><span>Python</span><span class="muted">Learning</span></div>
+                <div class="bar"><div class="fill" style="width:62%"></div></div>
+              </div>
+              <div class="meter">
+                <div class="meter__row"><span>Bash</span><span class="muted">Learning</span></div>
+                <div class="bar"><div class="fill" style="width:40%"></div></div>
+              </div>
+              <div class="meter">
+                <div class="meter__row"><span>C & C++</span><span class="muted">Learning</span></div>
+                <div class="bar"><div class="fill" style="width:20%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+   <!-- CERTIFICATIONS -->
+<section id="certs" class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <h2 class="h2 reveal">Certifications</h2>
+      </div>
+    </div>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="filters reveal">
+      <button class="fbtn is-on" data-cert="all">All</button>
+      <button class="fbtn" data-cert="Hackviser">Hackviser</button>
+      <button class="fbtn" data-cert="tryhackme">TryHackMe</button>
+      <button class="fbtn" data-cert="Coursera">Coursera</button>
+    </div>
+<br>
+    <div class="grid grid--3" id="certGrid">
+
+      <!-- Hackviser -->
+      <a class="card cert reveal" data-certcat="Hackviser"
+        href="https://lochanamanuth.github.io/capt.png" target="_blank">
+        <div class="cert__top">
+          <span class="cert__tag">Hackviser</span>
+          <span class="cert__meta muted"></span>
+        </div>
+        <h3 class="h3">Certified Associate Penetration Tester</h3>
+        <p class="muted"></p>
+        <div class="cert__go">Open <span>→</span></div>
+      </a>
+      <!--Coursera-->
+      <a class="card cert reveal" data-certcat="Coursera"
+        href="https://www.credly.com/badges/c5694221-df8c-4027-8d52-868640303d68/linked_in_profile"
+        target="_blank">
+        <div class="cert__top">
+          <span class="cert__tag">Coursera</span>
+          <span class="cert__meta muted"></span>
+        </div>
+        <h3 class="h3">Google Cybersecurity Professional</h3>
+        <p class="muted"></p>
+        <div class="cert__go">Open <span>→</span></div>
+      </a>
+
+      <!-- TRYHACKME -->
+      <a class="card cert reveal" data-certcat="tryhackme"
+        href="https://tryhackme.com/certificate/THM-EJOW3PHTFW" target="_blank">
+        <div class="cert__top">
+          <span class="cert__tag">TryHackMe</span>
+        </div>
+        <h3 class="h3">Pre Security</h3>
+        <p class="muted"></p>
+        <div class="cert__go">Open →</div>
+      </a>
+
+      <a class="card cert reveal" data-certcat="tryhackme"
+        href="https://tryhackme.com/certificate/THM-UAN9MQZSXZ" target="_blank">
+        <div class="cert__top">
+          <span class="cert__tag">TryHackMe</span>
+        </div>
+        <h3 class="h3">Cyber Security 101</h3>
+        <p class="muted"></p>
+        <div class="cert__go">Open →</div>
+      </a>
+
+      <a class="card cert reveal" data-certcat="tryhackme"
+        href="https://tryhackme.com/certificate/THM-LNNO0RTYCD" target="_blank">
+        <div class="cert__top">
+          <span class="cert__tag">TryHackMe</span>
+        </div>
+        <h3 class="h3">Jr Penetration Tester</h3>
+        <p class="muted"></p>
+        <div class="cert__go">Open →</div>
+      </a>
+
+      <a class="card cert reveal" data-certcat="tryhackme"
+        href="https://tryhackme.com/certificate/THM-SFJBVHLIRR" target="_blank">
+        <div class="cert__top">
+          <span class="cert__tag">TryHackMe</span>
+        </div>
+        <h3 class="h3">Security Engineer</h3>
+        <p class="muted"></p>
+        <div class="cert__go">Open →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <h2 class="h2 reveal">Projects</h2>
+          </div>
+
+          <div class="filters reveal" aria-label="Project filters">
+            <button class="fbtn is-on" data-filter="all">All</button>
+            <button class="fbtn" data-filter="labs">Labs</button>
+            <button class="fbtn" data-filter="Researchs">Researchs</button>
+            <button class="fbtn" data-filter="automation">Automation</button>
+          </div>
+        </div>
+
+        <div class="grid grid--3" id="projectGrid">
+          <a class="card project reveal" data-tags="automation" href="https://github.com/lochanamanuth/Mac-Changer" target="_blank" rel="noreferrer">
+            <div class="project__top">
+              <h3 class="h3">Mac‑Changer</h3>
+              <span class="pill">Automation</span>
+            </div>
+            <p class="muted">Automate MAC address changes on Kali Linux with a beginner‑friendly CLI.</p>
+            <ul class="miniList">
+              <li>Random MAC generation</li>
+              <li>One‑command interface change</li>
+              <li>Ethical use disclaimer</li>
+            </ul>
+            <div class="project__go">View repo <span>→</span></div>
+          </a>
+
+          
+          <a class="card project reveal" data-tags="automation" href="https://github.com/lochanamanuth/AutoMap" target="_blank" rel="noreferrer">
+            <div class="project__top">
+              <h3 class="h3">AutoMap</h3>
+              <span class="pill">Automation</span>
+            </div>
+            <p class="muted">Automate Nmap tool changes on Kali Linux with a beginner‑friendly CLI.</p>
+            <ul class="miniList">
+              <li>Learn and understand different Nmap scan techniques</li>
+              <li>Practice Python automation using real-world security tools</li>
+              <li>Ethical use disclaimer</li>
+            </ul>
+            <div class="project__go">View repo <span>→</span></div>
+          </a>
+
+          <div class="card project reveal project--ghost" data-tags="labs">
+            <div class="project__top">
+              <h3 class="h3">Writeups</h3>
+              <span class="pill pill--soft">Labs</span>
+            </div>
+            <p class="muted">TryHackMe / HTB writeups and learning notes.(Will update)</p>
+            <div class="project__go muted"></div>
+          </div>
+
+          <a class="card project reveal" data-tags="Researchs" href="https://media.licdn.com/dms/document/media/v2/D561FAQHG8_TX8cR0sQ/feedshare-document-pdf-analyzed/B56ZxwsDdjGwAc-/0/1771417123866?e=1774483200&v=beta&t=NWppG7kaTUAa-HqM1wefhnDEcvdpEc5j0m7q54OXCrY" target="_blank" rel="noreferrer">
+            <div class="project__top">
+              <h3 class="h3">The Dark Psychology of Cyber Attacks</h3>
+              <span class="pill">Researchs</span>
+            </div>
+            <p class="muted">Key Insight: My research found that Urgency (Fear) remains the most lethal weapon, resulting in an 80% success rate. This confirms that under emotional stress, the human brain often bypasses rational judgment.</p>
+            <div class="project__go">View repo <span>→</span></div>
+          </a>
+      
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <h2 class="h2 reveal">Contact</h2>
+          </div>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card reveal">
+            <h3 class="h3">Message</h3>
+            <form id="contactForm" class="form">
+              <label>
+                <span class="muted">Your name</span>
+                <input name="name" type="text" placeholder="Name" required />
+              </label>
+              <label>
+                <span class="muted">Your email</span>
+                <input name="email" type="email" placeholder="name@email.com" required />
+              </label>
+              <label>
+                <span class="muted">Message</span>
+                <textarea name="message" rows="5" placeholder="Hi Lochana..." required></textarea>
+              </label>
+              <button class="btn" type="submit">Send Email <span class="btn__arrow">→</span></button>
+              
+            </form>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="h3">Links</h3>
+            <div class="links2">
+              <a class="linkcard" href="https://www.linkedin.com/in/lochana-manuth/" target="_blank" rel="noreferrer">
+                <div class="linkcard__t">LinkedIn</div>
+                <div class="linkcard__b muted">linkedin.com/in/lochana-manuth</div>
+              </a>
+              <a class="linkcard" href="https://github.com/lochanamanuth" target="_blank" rel="noreferrer">
+                <div class="linkcard__t">GitHub</div>
+                <div class="linkcard__b muted">github.com/lochanamanuth</div>
+              </a>
+              <a class="linkcard" href="https://x.com/lochanamanuth1" target="_blank" rel="noreferrer">
+                <div class="linkcard__t">X</div>
+                <div class="linkcard__b muted">x.com/lochanamanuth1</div>
+              </a>
+              <a class="linkcard" href="https://lochanamanuth.github.io/" target="_blank" rel="noreferrer">
+                <div class="linkcard__t">Current Site</div>
+                <div class="linkcard__b muted">lochanamanuth.github.io</div>
+              </a>
+            </div>
+
+            <div class="divider"></div>
+            <div class="small muted">
+              © <span id="year"></span> Lochana Manuth Bandara.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">
+            <span class="brand__mark"></span>
+            <span class="footer__name">Lochana Manuth Bandara</span>
+          </div>
+          <div class="muted small">Cybersecurity learner • Ethical hacking • Hands‑on labs</div>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="#home">Top</a>
+          <a class="footer__link" href="https://www.linkedin.com/in/lochana-manuth/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="footer__link" href="https://github.com/lochanamanuth" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <button class="toTop" id="toTop" aria-label="Back to top">↑</button>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
